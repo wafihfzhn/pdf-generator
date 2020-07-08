@@ -56,3 +56,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.5.0'
 gem 'wicked_pdf', '~> 2.1'
 gem 'wkhtmltopdf-binary', '~> 0.12.6.2'
+gem 'faker', '~> 2.13'
