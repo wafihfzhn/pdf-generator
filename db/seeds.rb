@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+20.times do
+  ServicePayment.create(
+    name: Faker::Name.name,
+    email: Faker::Internet.email,
+    company: Faker::Company.name,
+    amount: Faker::Number.number(digits: 3),
+    invoice_number: Faker::Invoice.creditor_reference,
+    invoice_date: Faker::Date.between(from: 30.days.ago, to: Date.today)
+  )
+end
