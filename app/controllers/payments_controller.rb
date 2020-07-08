@@ -5,5 +5,13 @@ class PaymentsController < ApplicationController
 
   def show
     @payment = ServicePayment.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "file_name",
+        template: "payments/invoice.pdf.erb"
+      end
+    end
   end
 end

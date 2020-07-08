@@ -1,5 +1,7 @@
+<h1>Invoice</h1>
+
 <div class="container text-center">
-  <h3 class="text-center my-5">Payment Detail #<%= @payment.id %></h3>
+  <h3 class="text-center my-5">Bill to:</h3>
 
   <p>Name : <%= @payment.name %></p>
   <p>Email : <%= @payment.email %></p>
@@ -7,8 +9,4 @@
   <p>Invoice ID : <%= @payment.invoice_number %></p>
   <p>Invoice Date : <%= @payment.invoice_date.strftime("%d %B %Y") %></p>
   <p>Amount : $<%= @payment.amount %></p>
-
-  <br>
-
-  <%= link_to "Download Invoice", payment_path(@payment, format: :pdf), class: "btn btn-success" %>
 </div>
