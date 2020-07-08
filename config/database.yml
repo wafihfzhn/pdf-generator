@@ -83,5 +83,3 @@ test:
 production:
   <<: *default
   database: pdf_generator_production
-  username: pdf_generator
-  password: <%= ENV['PDF_GENERATOR_DATABASE_PASSWORD'] %>
